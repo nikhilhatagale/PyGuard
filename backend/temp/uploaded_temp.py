@@ -1,0 +1,4 @@
+def compute(a, b):
+    result = a + b
+    print(result)
+    return result
