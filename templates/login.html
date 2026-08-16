@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/login.css">
+
+<div class="login-wrapper">
+<div class="login-box">
+
+    <h2 class="login-title">Login</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category, message in messages %}
+     <div class="flash {{category}}">
+        {{ message }}
+     </div>
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+
+    <form method="POST">
+
+        <div class="input-box">
+            <input type="text" name="user" placeholder="Enter Username" required>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="pass" placeholder="Enter Password" required>
+        </div>
+
+        <button type="submit" class="btn-login">Login</button>
+
+        <a href="/signup" class="alt-link">Create new account →</a>
+        <a href="/" class="alt-link">← Back Home</a>
+    </form>
+
+</div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/home.css">
+
+
+<div class="home-wrap">
+
+    <div class="home-title">PyGuard <span>Pro</span></div>
+    <div class="home-sub">AI-Powered Code Analysis · Security Scan · Smart Refactor Engine</div>
+
+    <div class="home-btns">
+        <button class="h-btn" onclick="location='/dashboard'">Launch Analyzer</button>
+        <button class="h-btn" onclick="location='/playground'">Playground</button>
+        <button class="h-btn" onclick="location='/login'">Login</button>
+        <button class="h-btn" onclick="location='/signup'">Sign Up</button>
+    </div>
+
+    <div class="features">
+
+        <div class="card">
+            🧠 <div class="card-title">AI Refactor Engine</div>
+            <small>Cleaner code, auto suggestions, optimized output.</small>
+        </div>
+
+        <div class="card">
+            🔐 <div class="card-title">Security Scanner</div>
+            <small>Detect dangerous eval, exec, OS attacks instantly.</small>
+        </div>
+
+        <div class="card">
+            ⚡ <div class="card-title">Live Playground</div>
+            <small>Real-time Python execution + smart streaming logs.</small>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 PyGuard Pro — Built for devs who write fearless code.  
+    </div>
+
+</div>
+
+{% endblock %}

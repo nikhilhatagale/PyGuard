@@ -1,0 +1,94 @@
+/* ================= HOME PAGE ================= */
+
+/* MAIN WRAP */
+.home-wrap{
+    width:100%;
+    min-height:92vh;
+    background:#050B13;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:150px;
+}
+
+/* TITLE */
+.home-title{
+    font-size:4.4rem;
+    font-weight:900;
+    color:#ECFEFF;
+}
+.home-title span{
+    color:#00e4ff;
+}
+.home-sub{
+    font-size:1.25rem;
+    margin-top:10px;
+    color:#8EB2C3;
+}
+
+/* BUTTON ZONE */
+.home-btns{
+    display:flex;
+    gap:25px;
+    margin-top:38px;
+}
+
+.h-btn{
+    padding:15px 35px;
+    background:#0D1B24;
+    font-size:1.05rem;
+    border-radius:12px;
+    font-weight:700;
+    color:#D8F9FF;
+    border:1px solid #19546A;
+    cursor:pointer;
+    transition:.3s;
+}
+.h-btn:hover{
+    background:#00e4ff;
+    color:#00141e;
+    box-shadow:0 0 28px #00e4ff;
+    transform:translateY(-5px);
+}
+
+/* FEATURE CARDS */
+.features{
+    display:flex;
+    gap:32px;
+    margin-top:75px;
+}
+.card{
+    width:310px;
+    padding:32px;
+    font-size:1.15rem;
+    border-radius:18px;
+    background:#0C1520;
+    border:1px solid #174357;
+    color:#d7faff;
+    transition:.3s;
+}
+
+.card-title{
+    font-weight:800;
+    margin-top:10px;
+    font-size:1.28rem;
+}
+.card small{color:#8EBECD;font-size:.92rem;}
+
+.card:hover{
+    border-color:#00e4ff;
+    box-shadow:0 0 22px #00e4ff77;
+    transform:translateY(-8px);
+}
+
+/* FOOTER */
+.footer{
+    margin-top:90px;
+    color:#54707e;
+    font-size:.9rem;
+    text-align:center;
+}
+
+/* NAV + THEME HIDES (HOME ONLY) */
+.capstone-nav{ display:none !important; }
+#theme-toggle{ display:none !important; }

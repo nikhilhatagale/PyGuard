@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/profile.css">
+
+<div class="profile-page-wrapper">
+<div class="profile-root">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="user-box">
+      <div class="user-avatar">{{ user[0]|upper }}</div>
+      <div>
+        <div class="user-name">{{ user }}</div>
+        <small>Python Analyst</small>
+      </div>
+    </div>
+
+    <div class="side-item">
+      <p>Duplicate Code</p>
+      <h3>+{{ stats.scans }}</h3>
+    </div>
+
+    <div class="side-item">
+      <p>Security Issues</p>
+      <h3>+{{ stats.threats }}</h3>
+    </div>
+
+    <div class="side-item">
+      <p>AI Suggestions</p>
+      <h3>+{{ stats.ai_chats }}</h3>
+    </div>
+
+    <div class="btn logout" onclick="location.href='/logout'">Log Out</div>
+    <div class="btn reset" onclick="resetProfile()">Reset Analytics</div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="header">
+      <h1>Code Detect & Analysis Tools</h1>
+      
+    </div>
+
+    <div class="features">
+      <div class="feature"><h3>Duplicate Code</h3><p>Find code duplication</p></div>
+      <div class="feature"><h3>Security</h3><p>Scan vulnerabilities</p></div>
+      <div class="feature"><h3>AI Suggestions</h3><p>Improve with AI</p></div>
+      <div class="feature"><h3>Playground</h3><p>Run code safely</p></div>
+    </div>
+
+    <div class="activity">
+      <h2>User Activity</h2>
+      <div class="flow">
+        <div class="flow-box">Duplicate +{{ stats.scans }}</div>
+        <div style="text-align:center;">➡</div>
+        <div class="flow-box">Security +{{ stats.threats }}</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h2>{{ stats.scans }}</h2><p>Code Analyzed</p></div>
+      <div class="stat"><h2>{{ stats.threats }}</h2><p>Security Scans</p></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<style>#theme-toggle{display:none!important}</style>
+<script src="/static/js/profile.js"></script>
+
+{% endblock %}

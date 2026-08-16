@@ -1,0 +1,79 @@
+/* ===============================
+   WRAPPER
+   =============================== */
+
+.playground-wrap {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===============================
+   TITLES
+   =============================== */
+
+.pg-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 12px;
+}
+
+.pg-console-title {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--title-color);
+}
+
+/* ===============================
+   EDITOR (ALWAYS DARK)
+   =============================== */
+
+#pg-editor {
+    width: 100%;
+    height: 380px;
+    background: #1a1d27;
+    border: 1px solid #2f3344;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CodeMirror */
+.CodeMirror {
+    height: 100% !important;
+    background: #1a1d27;
+    color: #e6e6e6;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.pg-controls {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ===============================
+   CONSOLE (ALWAYS DARK)
+   =============================== */
+
+#pg-console {
+    width: 100%;
+    height: 280px;
+    background: #0f0f12;
+    border: 1px solid #2f3344;
+    border-radius: 12px;
+    padding: 12px;
+    color: #ffffff;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: "Fira Code", monospace;
+}

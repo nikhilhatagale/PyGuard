@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="pro-layout" id="layout">
+
+    <!-- ============ LEFT SIDEBAR ============ -->
+    <aside class="sidebar">
+
+        <div class="side-item active" data-target="editor-panel">
+            📝 <span>Editor</span>
+        </div>
+
+        <div class="side-item" data-target="issues-panel">
+            📊 <span>Code Quality</span>
+        </div>
+
+        <div class="side-item" data-target="security-panel">
+            🔒 <span>Security</span>
+        </div>
+
+        <div class="side-item" data-target="duplicate-panel">
+            🔁 <span>Duplicates</span>
+        </div>
+
+        <div class="side-item" data-target="ai-panel">
+            🤖 <span>AI Suggestions</span>
+        </div>
+
+    </aside>
+
+    <!-- ============ CENTER EDITOR PANEL ============ -->
+    <section class="editor-area" id="editor-panel">
+
+        <div class="editor-header">
+            <div class="left">
+                <span class="editor-heading">Python Code</span>
+                <label for="hidden-file" class="upload-btn">+</label>
+                <input id="hidden-file" type="file" accept=".py" hidden>
+            </div>
+
+            <div class="right controls">
+                <button id="analyze-btn" class="btn primary">Analyze</button>
+                <button id="reset-btn" class="btn secondary">Reset</button>
+            </div>
+        </div>
+
+        <div id="code-editor" class="editor"></div>
+        <textarea id="code-textarea" hidden></textarea>
+
+        <p id="status" class="status"></p>
+
+    </section>
+
+    <!-- ============ RIGHT RESULTS PANEL ============ -->
+    <section class="results-panel hidden" id="results-panel">
+
+        <!-- Static Analysis -->
+        <div class="results-box" id="issues-panel">
+            <h3>Static Analysis</h3>
+            <div id="static-output" class="analysis-box"></div>
+        </div>
+
+        <!-- Security -->
+        <div class="results-box hidden" id="security-panel">
+            <h3>Security Issues</h3>
+            <div id="security-output" class="analysis-box"></div>
+        </div>
+
+        <!-- Duplicate -->
+        <div class="results-box hidden" id="duplicate-panel">
+            <h3>Duplicate Code</h3>
+            <pre id="duplicate-output"></pre>
+        </div>
+
+        <!-- AI OUTPUT -->
+        <div class="results-box hidden" id="ai-panel">
+
+            <h3>AI Summary</h3>
+            <p id="ai-summary"></p>
+
+            <h3>Suggestions</h3>
+            <ul id="ai-suggestions"></ul>
+
+            <h3>Improved Code</h3>
+            <pre id="ai-code-block"><code></code></pre>
+
+            <button id="load-ai" class="btn small primary" style="margin-top:10px;">
+                Load Improved Code
+            </button>
+            <button id="load-improved" class="btn small">
+                Load Improved into Playground
+            </button>
+
+            <h3 style="margin-top:20px;">Minimized Code</h3>
+            <pre id="ai-minimize-block"><code></code></pre>
+
+            <button id="load-ai-min" class="btn small secondary" style="margin-top:10px;">
+                Load Minimized Code
+            </button>
+            <button id="load-minimized" class="btn small">
+                Load Minimized into Playground
+            </button>
+
+            <h3 style="margin-top:20px;">Optimizations</h3>
+            <ul id="ai-optimizations"></ul>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="/static/js/index_page.js"></script>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/signup.css">
+
+<div class="signup-wrapper">
+<div class="signup-box">
+
+    <h2 class="signup-title">Create Account</h2>
+
+    <form method="POST">
+        <div class="input-row">
+            <input type="text" name="user" placeholder="Choose Username" required>
+        </div>
+
+        <div class="input-row">
+            <input type="password" name="pass" placeholder="Create Password" required>
+        </div>
+
+        <button class="btn-sign">Signup</button>
+        <a class="alt" href="/login">Already have account? Login →</a>
+        <a class="alt" href="/">← Back Home</a>
+    </form>
+
+</div>
+</div>
+
+<style>#theme-toggle{display:none!important}</style>
+<style>
+.capstone-nav{ display:none !important; }
+</style>
+
+{% endblock %}

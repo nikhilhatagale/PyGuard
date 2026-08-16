@@ -1,0 +1,198 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   HERO SECTION (HOMEPAGE)
+========================= */
+.hero{
+    height:88vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url('/static/images/bg_dark.jpg') center/cover no-repeat;
+    backdrop-filter:blur(5px);
+    padding:20px;
+}
+
+.hero-content{
+    background:rgba(255,255,255,0.05);
+    padding:35px 60px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.12);
+    box-shadow:0 0 35px rgba(0,0,0,0.45);
+    backdrop-filter:blur(25px);
+    animation:fadeIn 1.4s ease;
+}
+
+.hero-logo{
+    height:90px;
+    filter:drop-shadow(0 0 15px #00E5FF);
+    margin-bottom:12px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.tagline{
+    font-size:17px;
+    color:#C8EFFF;
+    margin-bottom:25px;
+    opacity:.9;
+}
+
+.hero-buttons a{
+    padding:12px 30px;
+    margin:0 6px;
+    font-size:16px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    transition:0.25s;
+}
+
+.btn-primary{ background:#00E8FF; }
+.btn-secondary{ border:2px solid #00E8FF; }
+
+.btn-primary:hover{
+    background:#009EFF;
+    transform:scale(1.05);
+}
+.btn-secondary:hover{
+    background:#00E8FF;
+    transform:scale(1.05);
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+.features{
+    padding:70px 0;
+    text-align:center;
+    background:#0E1117;
+}
+
+.features h2{
+    color:#00E5FF;
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.features .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:16px;
+    max-width:950px;
+    margin:auto;
+}
+
+.features .card{
+    background:#131720;
+    color:#CFEFFF;
+    padding:22px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.25s;
+}
+
+.features .card:hover{
+    background:#0f1a27;
+    border-color:#00E5FF;
+    transform:translateY(-6px);
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-bottom{
+    text-align:center;
+    padding:80px 0;
+    background:#0D0F16;
+}
+
+.cta-bottom h2{ 
+    font-size:28px; 
+    color:white; 
+    margin-bottom:25px;
+}
+
+.btn-glow{
+    padding:12px 38px;
+    font-size:18px;
+    border-radius:8px;
+    background:#00E8FF;
+    color:#00212A;
+    box-shadow:0 0 18px #00E8FF;
+    transition:.25s;
+}
+
+.btn-glow:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 28px #00E8FF;
+}
+
+/* =========================
+   AUTH PAGE UI (LOGIN/SIGNUP)
+========================= */
+.auth-box{
+    width:350px;
+    margin:120px auto;
+    padding:35px;
+    background:rgba(255,255,255,0.05);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(25px);
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,.4);
+}
+
+.auth-box h2{
+    color:white;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.auth-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:#1A1F27;
+    color:white;
+}
+
+.btn-primary.full{
+    width:100%;
+    margin-top:14px;
+}
+
+.auth-box p{
+    color:#88C8FF;
+    margin-top:12px;
+}
+
+.auth-box a{
+    color:#00E8FF;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}

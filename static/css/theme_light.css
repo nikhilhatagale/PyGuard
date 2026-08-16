@@ -1,0 +1,126 @@
+/* ===================================================================
+   PYGUARD – LIGHT MODERN THEME (VS Code Light Pro Style)
+=================================================================== */
+
+:root {
+    /* Base */
+    --bg: #f6f7fb;
+    --text: #1a1a1a;
+
+    /* Panels */
+    --panel-bg: #ffffff;
+    --panel-border: #d6d6e2;
+
+    /* Accent */
+    --accent: #7d5fff;
+    --accent-hover: #9d80ff;
+
+    /* Editor / Inputs */
+    --editor-bg: #ffffff;
+    --input-border: #c9cad6;
+
+    /* Tabs */
+    --tab-bg: #ededff;
+    --tab-active: #7d5fff;
+
+    /* Shadows */
+    --shadow: 0 6px 18px rgba(0,0,0,0.1);
+
+    /* Results */
+    --result-bg: #ffffff;
+
+    /* Status */
+    --status-success: #29c56f;
+    --status-error: #f44747;
+}
+
+/* Panels */
+.left-panel,
+.right-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    box-shadow: var(--shadow);
+}
+
+/* DO NOT block CodeMirror inside editor */
+.editor {
+    height: 380px;
+}
+
+.CodeMirror {
+    height: 100% !important;
+    background: var(--editor-bg) !important;
+    color: var(--text) !important;
+}
+
+
+/* Tabs */
+.tab {
+    background: var(--tab-bg);
+    color: var(--text) !important;
+}
+
+.tab.active {
+    background: var(--accent);
+    color: #fff !important;
+}
+
+/* Result Boxes */
+#static-output,
+#security-output,
+#duplicate-output {
+    background: var(--result-bg);
+    color: var(--text);
+    border: 1px solid #d3d3e0;
+    padding: 14px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+/* AI Blocks */
+#ai-code-block,
+#minimized-code-block {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 16px;
+    font-family: "Fira Code", monospace;
+}
+
+/* Scrollbars */
+#ai-code-block::-webkit-scrollbar,
+#minimized-code-block::-webkit-scrollbar {
+    height: 6px;
+}
+
+#ai-code-block::-webkit-scrollbar-thumb,
+#minimized-code-block::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.nav-logo { 
+    display:flex; 
+    align-items:center; 
+    font-size:20px; 
+    font-weight:600; 
+}
+
+.brand-text {
+    font-size:21px; 
+    font-weight:bold;
+    color:white;
+}
+
+.sidebar-logo img:hover {
+    transform:scale(1.06);
+    transition:0.3s;
+}
+
+#themeToggle { background:#e6e2ff; color:#000; }
+.profile-bubble-light{
+    background:#d9c8ff !important;
+    color:#000 !important;
+    border-color:#9479ff !important;
+}

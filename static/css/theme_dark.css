@@ -1,0 +1,156 @@
+/* ===================================================================
+   PYGUARD – DARK MODERN THEME (VS Code Pro Style)
+=================================================================== */
+
+:root {
+    /* Base */
+    --bg: #0c0e14;
+    --text: #e6e6e6;
+
+    /* Panels */
+    --panel-bg: rgba(22, 25, 36, 0.85);
+    --panel-border: #2f3344;
+
+    /* Accent */
+    --accent: #7d5fff;
+    --accent-hover: #9d80ff;
+
+    /* Editor / Inputs */
+    --editor-bg: #1a1d27;
+    --input-border: #3d4153;
+
+    /* Tabs */
+    --tab-bg: #222634;
+    --tab-active: #7d5fff;
+
+    /* Shadows */
+    --shadow: 0 8px 24px rgba(0,0,0,0.45);
+
+    /* Results */
+    --result-bg: #131723;
+
+    /* Status */
+    --status-success: #3dff85;
+    --status-error: #ff4f4f;
+
+    /* Smooth transitions */
+    --transition-fast: 0.25s ease;
+}
+
+/* Global Smoothness */
+* {
+    transition: background var(--transition-fast),
+                color var(--transition-fast),
+                border var(--transition-fast);
+}
+
+/* Body */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+}
+
+/* Panels */
+.left-panel, .right-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+/* DO NOT block CodeMirror inside editor */
+.editor {
+    height: 380px;
+}
+
+.CodeMirror {
+    height: 100% !important;
+    background: var(--editor-bg) !important;
+    color: var(--text) !important;
+}
+
+
+/* Tabs */
+.tab {
+    background: var(--tab-bg);
+    color: var(--text);
+}
+
+.tab.active {
+    background: var(--accent);
+    color: #fff !important;
+}
+
+/* Results Boxes */
+#static-output,
+#security-output,
+#duplicate-output {
+    background: var(--result-bg);
+    border: 1px solid var(--panel-border);
+    padding: 16px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+/* AI Blocks — Improved code */
+#ai-code-block,
+#minimized-code-block {
+    background: #181b26 !important;
+    color: #ffffff !important;
+    border: 1px solid #2f3344;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: "Fira Code", monospace;
+    overflow-x: auto;
+}
+
+#ai-code-block * ,
+#minimized-code-block * {
+    color: #fff !important;
+}
+
+/* Scrollbars */
+#static-output::-webkit-scrollbar,
+#security-output::-webkit-scrollbar,
+#duplicate-output::-webkit-scrollbar,
+#ai-code-block::-webkit-scrollbar,
+#minimized-code-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+#static-output::-webkit-scrollbar-thumb,
+#security-output::-webkit-scrollbar-thumb,
+#duplicate-output::-webkit-scrollbar-thumb,
+#ai-code-block::-webkit-scrollbar-thumb,
+#minimized-code-block::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.nav-logo { 
+    display:flex; 
+    align-items:center; 
+    font-size:20px; 
+    font-weight:600; 
+}
+
+.brand-text {
+    font-size:21px; 
+    font-weight:bold;
+    color:white;
+}
+
+.sidebar-logo img:hover {
+    transform:scale(1.06);
+    transition:0.3s;
+}
+/* Nav Icons Theme Adapt */
+#themeToggle { background:#6e4cff; }
+#themeToggle:hover { background:#8f6dff; }
+
+.profile-bubble-dark{
+    background:#8054ff !important;
+    border-color:#b495ff !important;
+}

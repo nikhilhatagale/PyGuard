@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PyGuard Pro | AI Powered Python Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MAIN -->
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <!-- THEME (temporary – later clean करेंगे) -->
+    <link rel="stylesheet" id="theme-link" href="/static/css/theme_dark.css">
+
+    <!-- CODEMIRROR -->
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+
+    <!-- ASSISTANT CSS -->
+    <link rel="stylesheet" href="/static/css/assistant.css">
+</head>
+
+<body>
+
+<header class="navbar glass-nav">
+    <div class="nav-left">
+        <img src="/static/images/logo.png" class="logo">
+        <span class="title">PyGuard Pro</span>
+    </div>
+
+    <nav class="nav-center capstone-nav">
+        <a href="/" class="cap-btn {% if request.path == '/' %}active{% endif %}">
+            Home
+        </a>
+
+        <a href="/playground" 
+           class="cap-btn {% if request.path.startswith('/playground') %}active{% endif %}">
+            Playground
+        </a>
+
+        {% if not request.path.startswith('/dashboard') %}
+        <a href="/dashboard"
+           class="cap-btn {% if request.path.startswith('/dashboard') %}active{% endif %}">
+            Analyze
+        </a>
+        {% endif %}
+    </nav>
+
+    <div class="nav-right">
+        <button id="theme-toggle" class="toggle-btn">🌙</button>
+
+        {% if session.get("user") %}
+        <a href="/profile" class="profile-btn">
+            {{ session['user'][0] | upper }}
+        </a>
+        {% endif %}
+    </div>
+</header>
+
+<main class="workspace">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ===== AI ASSISTANT OVERLAY ===== -->
+<div id="assistant-overlay"></div>
+
+<!-- ===== AI ASSISTANT MODAL ===== -->
+<div id="assistant-modal">
+
+    <div class="assistant-header">
+        <span>PyGuard Assistant</span>
+        <button id="assistant-close">✕</button>
+    </div>
+
+    <div id="assistant-chat"></div>
+
+    <div class="assistant-footer">
+
+
+    <!-- Mic -->
+    <button id="assistant-mic" title="Voice input">
+        🎤
+    </button>
+
+    <!-- Input -->
+    <input
+        type="text"
+        id="assistant-input"
+        placeholder="Ask PyGuard..."
+        autocomplete="off"
+    />
+
+    <!-- Send -->
+    <button id="assistant-send">
+        Send
+    </button>
+
+</div>
+
+
+</div>
+
+<!-- ===== FLOATING BUBBLE ===== -->
+<div id="assistant-bubble">🤖</div>
+
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+
+<script src="/static/js/ui.js"></script>
+<script src="/static/js/editor.js"></script>
+<script src="/static/js/analyzer.js"></script>
+<script src="/static/js/assistant.js"></script>
+
+</body>
+</html>

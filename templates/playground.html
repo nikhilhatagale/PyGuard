@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/playground.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"/>
+
+<div class="pro-layout">
+    <section class="playground-wrap">
+
+        <!-- PLAYGROUND TITLE -->
+        <h2 class="pg-title">Playground</h2>
+
+        <div id="pg-editor"></div>
+
+        <div class="pg-controls">
+            <button id="run-btn" class="btn primary">Run Code</button>
+            <button id="stop-btn" class="btn secondary">Stop</button>
+            <button id="clear-btn" class="btn secondary">Clear Console</button>
+            <button id="ask-ai-btn" class="btn primary">Ask AI</button>
+        </div>
+
+        <!-- CONSOLE TITLE (SAME CLASS, SAME LOOK) -->
+        <h2 class="pg-title pg-title-gap">Console Output</h2>
+
+        <pre id="pg-console"></pre>
+
+    </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+<script src="/static/js/playground.js"></script>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+/* ================= SIGNUP PAGE ================= */
+
+.signup-wrapper{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle,#00131d,#000000 85%);
+}
+
+.signup-box{
+    width:440px;
+    padding:45px;
+    border-radius:18px;
+    background:#021019bb;
+    backdrop-filter:blur(10px);
+    border:1px solid #00eaff55;
+    box-shadow:0 0 25px #00eaff50;
+    animation:popIn .6s;
+}
+
+@keyframes popIn{
+    from{opacity:0; transform:scale(.85);}
+    to{opacity:1; transform:scale(1);}
+}
+
+.signup-title{
+    font-size:2.4rem;
+    color:#00eaff;
+    font-weight:700;
+    text-align:center;
+    text-shadow:0 0 15px #00eaff;
+    margin-bottom:18px;
+}
+
+.input-row{
+    width:100%;
+    margin:14px 0;
+}
+
+.input-row input{
+    width:100%;
+    padding:14px;
+    background:#00000065;
+    border:1.5px solid #00d5ff88;
+    border-radius:8px;
+    outline:none;
+    color:#b8f9ff;
+    font-size:1.05rem;
+    transition:.25s;
+}
+
+.input-row input:focus{
+    border-color:#00faff;
+    box-shadow:0 0 12px #00faff;
+}
+
+/* GOLD HIGHLIGHT REGISTER BUTTON */
+.btn-sign{
+    width:100%;
+    margin-top:20px;
+    padding:13px;
+    background:linear-gradient(
+        115deg,
+        #00eaff 0%,
+        #007dff 40%,
+        #00ffce 100%
+    );
+    border:none;
+    border-radius:50px;
+    outline:none;
+    font-size:1.2rem;
+    font-weight:700;
+    color:#000;
+    cursor:pointer;
+    box-shadow:0 0 22px #00faffaa, inset 0 0 8px #66f7ff;
+    transition:.25s;
+}
+
+.btn-sign:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 32px #00fcff;
+}
+
+/* BOTTOM LINKS */
+.alt{
+    margin-top:15px;
+    text-align:center;
+    color:#78f5ff;
+    display:block;
+}
+
+.alt:hover{
+    color:#00eaff;
+}
+
+/* NAV + THEME HIDES (SIGNUP ONLY) */
+#theme-toggle{display:none!important}
+.capstone-nav{display:none!important}
